@@ -1,0 +1,77 @@
+name: Infrastructure Task
+description: Maintenance, upgrades, config changes, or operational work
+title: "[task]: "
+labels: ["kind/task"]
+type: tasks
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for operational work: version bumps, node maintenance, secret rotation, cleanup, etc.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to be done?
+      placeholder: e.g. Upgrade Talos to v1.8.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide context and any relevant details.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Execution Plan
+      description: Step-by-step plan to execute this task.
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Verify
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: false
+      options:
+        - TalosOS / Nodes
+        - Kubernetes / Cluster
+        - Pulumi / IaC
+        - Networking
+        - Storage
+        - Security / Auth
+        - Monitoring / Observability
+        - CI/CD (Flux/ArgoCD)
+        - Documentation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk Level
+      options:
+        - low (no expected impact)
+        - medium (brief interruption possible)
+        - high (planned outage window needed)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: rollback
+    attributes:
+      label: Rollback Plan
+      description: Confirm you have a way to revert if things go wrong
+      options:
+        - label: I have a rollback plan
+          required: true

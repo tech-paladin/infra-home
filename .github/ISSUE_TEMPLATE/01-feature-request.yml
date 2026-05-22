@@ -1,0 +1,93 @@
+name: Feature Request
+description: Propose a new service, component, or infrastructure addition
+title: "[feat]: "
+labels: ["kind/feature"]
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please describe what you'd like to add and why.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description of the feature
+      placeholder: e.g. Deploy an internal DNS resolver
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this needed? What gap does it fill?
+      placeholder: Explain the use case and benefit
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How should this be implemented? Be specific about tools, resources, config.
+      placeholder: |
+        - Pulumi resource(s) needed
+        - Kubernetes manifests / Helm charts
+        - DNS / networking changes
+        - TalOS machine config changes
+      value: |
+        **Stack:** (e.g. Pulumi Go, Helm, kustomize)
+
+        **Resources:**
+        -
+
+        **Dependencies:**
+        -
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the stack does this affect?
+      multiple: false
+      options:
+        - TalosOS / Nodes
+        - Kubernetes / Cluster
+        - Pulumi / IaC
+        - Networking
+        - Storage
+        - Security / Auth
+        - Monitoring / Observability
+        - CI/CD (Flux/ArgoCD)
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - low
+        - medium
+        - high
+        - critical
+      default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this to be considered done?
+      placeholder: |
+        - [ ] Service is deployed and healthy
+        - [ ] Accessible via expected endpoint
+        - [ ] Monitoring / alerts configured
+        - [ ] Documented in wiki
