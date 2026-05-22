@@ -2,7 +2,6 @@ name: Feature Request
 description: Propose a new service, component, or infrastructure addition
 title: "[feat]: "
 labels: ["kind/feature"]
-type: feature
 body:
   - type: markdown
     attributes:
