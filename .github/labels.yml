@@ -1,0 +1,79 @@
+# Labels for infra-home project
+# Import via: gh label clone <source-repo> or github-label-sync
+
+# --- Kind ---
+- name: kind/feature
+  color: "a2eeef"
+  description: New feature or service
+- name: kind/bug
+  color: "d73a4a"
+  description: Something isn't working
+- name: kind/task
+  color: "c2e0c6"
+  description: Maintenance or operational work
+- name: kind/epic
+  color: "3E4B9E"
+  description: A large body of work
+- name: kind/improvement
+  color: "0e8a16"
+  description: Enhancement to existing functionality
+
+# --- Priority ---
+- name: priority/critical
+  color: "b60205"
+  description: Must be addressed immediately
+- name: priority/high
+  color: "ff9f1c"
+  description: Should be addressed soon
+- name: priority/medium
+  color: "ffcc00"
+  description: Important but not urgent
+- name: priority/low
+  color: "cfd3d7"
+  description: Nice to have
+
+# --- Area ---
+- name: area/talos
+  color: "006b75"
+  description: TalosOS / node-level concerns
+- name: area/kubernetes
+  color: "326ce5"
+  description: Kubernetes cluster-wide concerns
+- name: area/pulumi
+  color: "e57830"
+  description: Pulumi IaC / Go code
+- name: area/networking
+  color: "5319e7"
+  description: DNS, LB, CNI, firewall
+- name: area/storage
+  color: "0e8a16"
+  description: Persistent storage / PVCs
+- name: area/security
+  color: "b60205"
+  description: Auth, secrets, RBAC, TLS
+- name: area/monitoring
+  color: "f9d0c4"
+  description: Metrics, logs, alerts, dashboards
+- name: area/ci-cd
+  color: "1d76db"
+  description: Flux, ArgoCD, GitHub Actions
+- name: area/documentation
+  color: "0075ca"
+  description: Docs, runbooks, wiki
+
+# --- Status ---
+- name: status/blocked
+  color: "e99695"
+  description: Blocked by another issue or external dependency
+- name: status/in-progress
+  color: "fbca04"
+  description: Someone is actively working on this
+- name: status/needs-review
+  color: "c5def5"
+  description: Work is done, needs review
+- name: status/wontfix
+  color: "ffffff"
+  description: Won't be addressed
+- name: good-first-issue
+  color: "7057ff"
+  description: Good for new contributors
